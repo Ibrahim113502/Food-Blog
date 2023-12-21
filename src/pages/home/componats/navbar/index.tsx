@@ -9,17 +9,21 @@ import { DarkThemeToggle, Flowbite } from 'flowbite-react';
 import LoginForm from '../../../Loginform';
 export default function MyNavbar() {
   const [openModal, setOpenModal] = useState<string | undefined>();
+  const handleCloseModal = () => {
+    setOpenModal(undefined);
+  };
   const [email, setEmail] = useState("");
   const props = { openModal, setOpenModal, email, setEmail };
   return (
     <>
       <Flowbite>
-        <Navbar fluid rounded className='lg:!px-[6rem]'>
+        <Navbar fluid rounded className='lg:!px-[6rem] sm:!flex-nowrap'>
           <Navbar.Brand >
-            <img src={LogoImg} className="mr-3 h-{3.25rem} sm:h-9 h-28" />
+            <img src={LogoImg} className="mr-3 h-12  sm:h-9   lg:h-28" />
             {/* <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Tastes Of Mouth</span> */}
           </Navbar.Brand>
-          <div className="w-full md:w-[30%]">
+          <DarkThemeToggle className='md:hidden !p-0.5' />
+          <div className="w-full md:w-[30%] hidden md:hidden">
             <form className="flex items-center">
               <label htmlFor="simple-search" className="sr-only">Search</label>
               <div className="relative w-full">
@@ -43,12 +47,12 @@ export default function MyNavbar() {
             <Navbar.Link href="/foodItems">Food Items</Navbar.Link>
             <Navbar.Link href="#">Contact</Navbar.Link>
             <Navbar.Link onClick={() => props.setOpenModal('form-elements')}>Sign In</Navbar.Link>
-            <Modal show={props.openModal === 'form-elements'} size="md" popup onClose={() => props.setOpenModal(undefined)}>
-            <Modal.Body>
-             <LoginForm/>
-             </Modal.Body>
-            </Modal>
-            <DarkThemeToggle className='!p-0.5' />
+            <Modal show={props.openModal === 'form-elements'} size="md" popup onClose={handleCloseModal}>
+        <Modal.Body>
+          <LoginForm closeModal={handleCloseModal} />
+        </Modal.Body>
+      </Modal>
+            <DarkThemeToggle className='hidden !p-0.5' />
           </Navbar.Collapse>
         </Navbar>
         {/* <Banner>

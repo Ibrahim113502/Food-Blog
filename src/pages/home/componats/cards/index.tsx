@@ -10,8 +10,8 @@ export default function CardWithImage() {
         <>
             <Flowbite>
                 <section  className='dark:text-gray-400 dark:bg-gray-900'>
-                    <div className='flex p-6 gap-4 '>
-                        <Card className='w-[32%] h-[50%] rounded '
+                    <div className='lg:flex p-6 gap-4 '>
+                        <Card className='lg:w-[32%] h-[50%] rounded '
                             imgAlt="Meaningful alt text for an image that is not purely decorative"
                             imgSrc={Image1}>
                             <Link to={'/food1'}>
@@ -27,7 +27,7 @@ export default function CardWithImage() {
                                 </p>
                             </Link>
                         </Card>
-                        <Card className='w-[32%] h-[50%] rounded'
+                        <Card className='lg:w-[32%] h-[50%] rounded'
                             imgAlt="Meaningful alt text for an image that is not purely decorative"
                             imgSrc={Image2}
                         > <Link to={'/food2'}>
@@ -42,7 +42,7 @@ export default function CardWithImage() {
                                 </p>
                             </p></Link>
                         </Card>
-                        <Card className='w-[32%] h-[50%] rounded'
+                        <Card className='lg:w-[32%] h-[50%] rounded'
                             imgAlt="Meaningful alt text for an image that is not purely decorative"
                             imgSrc={Image3}
                         ><Link to={'/food2'}>

@@ -105,7 +105,7 @@ function Itemrow1() {
         })} */}
             <Flowbite >
                 <section className='dark:text-gray-400 dark:bg-gray-900 '>
-                    <div className='grid grid-cols-4 p-6 gap-4 '>
+                    <div className='md:grid md:grid-cols-2 lg:grid-cols-4 p-6 gap-4 '>
                         {
                             foodDetails.map((food: any) => {
                                 return (

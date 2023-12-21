@@ -1,47 +1,37 @@
-import axios from 'axios';
+import React, { useEffect } from 'react';
 import { Table } from 'flowbite-react';
-import { useEffect,useState } from 'react';
+import { fetchProducts } from '../../../../../../../api';
+import { selectProducts } from '../../../../../../../reducers/apiSlice';
+import { useDispatch, useSelector } from 'react-redux';
 function AdminTable() {
-    const [items, setItems] = useState([]);
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get("https://fakestoreapi.com/products");
-                setItems(response.data);
-            } catch (error) {
-                console.error("Error fetching data:", error);
-            }
-        };
-
-        fetchData();
-    }, []);
+    const dispatch = useDispatch();
+    const apiData=useSelector(selectProducts)
+    
+    useEffect(()=>{
+        if(apiData.length===0){
+        dispatch(fetchProducts());
+        console.log("Hai Bro")
+    }
+    },[dispatch,apiData])
     return (
         <>
-
-            <p className=' text-center'>Food Details</p>
+            <p className='text-center'>Product Details</p>
             <Table>
-                {/* <Table.Head>
-                    <Table.HeadCell>Product name</Table.HeadCell>
-                    <Table.HeadCell>Category</Table.HeadCell>
-                    <Table.HeadCell>Price</Table.HeadCell>
-                    <Table.HeadCell>Image</Table.HeadCell>
-                </Table.Head> */}
                 <Table.Body className="divide-y">
-                    {items.map((obj) => {
-                        return (<div>
-                            <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                                <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
-                                    {obj.title}
-                                </Table.Cell>
-                                <Table.Cell>{obj.category}</Table.Cell>
-                                <Table.Cell>{obj.price}</Table.Cell>
-                                <Table.Cell><img className='h-[40px]' src={obj.image} alt="" /></Table.Cell>
-                            </Table.Row>
-                        </div>)
-                    })}
+                    {apiData.map((obj) => (
+                        <Table.Row key={obj.id} className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                            <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+                                {obj.title}
+                            </Table.Cell>
+                            <Table.Cell>{obj.category}</Table.Cell>
+                            <Table.Cell>{obj.price}</Table.Cell>
+                            <Table.Cell><img className='h-[40px]' src={obj.image} alt="" /></Table.Cell>
+                        </Table.Row>
+                    ))}
                 </Table.Body>
             </Table>
         </>
-    )
+    );
 }
-export default AdminTable
+
+export default AdminTable;

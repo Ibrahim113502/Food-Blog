@@ -20,7 +20,7 @@ function AdminForm() {
                     ...data
                 }
             )
-        }).then((response) => { console.log(response.data); })
+        }).then((response) => {alert(response.data) })
     }
     // console.log(State);
 
