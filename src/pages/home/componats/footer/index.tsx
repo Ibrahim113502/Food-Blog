@@ -1,6 +1,5 @@
 import React from "react";
 import LoginForm from '../../../Loginform/index'
-import LogoImg from '../../../../assets/Images/logo.png'
 import { Button } from "flowbite-react";
 import { useSelector,useDispatch } from "react-redux";
 import { increment,decrement } from "../../../../reducers/counterSlice";
@@ -17,7 +16,7 @@ function Footerpage() {
                 <Button>-</Button> */}
                 <div className="mx-auto max-w-screen-xl text-center">
                     <a href="#" className="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
-                    <img src={LogoImg} className="mr-3  lg:h-28 h-12" />
+                    <img src='/logo.png' className="mr-3  lg:h-10 h-12" />
                     
                     </a>
                     <p className="my-6 text-gray-500 dark:text-gray-400 font-serif">
@@ -45,6 +44,6 @@ function Footerpage() {
 }
 export default Footerpage;
 
-function state(state: unknown): unknown {
-    throw new Error("Function not implemented.");
-}
+// function state(state: unknown): unknown {
+//     throw new Error("Function not implemented.");
+// }

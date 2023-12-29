@@ -1,5 +1,4 @@
 import React from "react";
-import Image1 from '../../../assets/Images/card/biriyani.jpg'
 function Food1() {
     return (
         <>
@@ -7,7 +6,7 @@ function Food1() {
                 <h2 className="font-extrabold text-4xl text-center font-serif py-6">Chicken Mandi</h2>
                 <p className="font-serif font-thin px-6 py-3">Chicken Mandi is a delicious traditional dish that originates from Yemen but is widely enjoyed in various Middle Eastern countries. It's known for its aromatic rice, tender chicken, and a blend of spices. Here's a basic recipe for Chicken Mandi:</p>
                 <div className="flex p-10">
-                    <img className="object-contain  h-full w-[50%]" src={Image1} alt="" />
+                    <img className="object-contain  h-full w-[50%]" src='/biriyani.jpg' alt="" />
                     <p className="font-serif px-5 py-2"><span className="font-semibold">Ingredients:<br /></span>
 
                         For the Chicken:

@@ -1,10 +1,6 @@
 import { Card, Flowbite } from 'flowbite-react';
 import React from 'react';
-import Image1 from '../../../../assets/Images/card/biriyani.jpg' 
-import Image2 from '../../../../assets/Images/card/Chiken.jpg'
-import Image3 from '../../../../assets/Images/card/Burger.jpg'
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-// import Food1 from '../../../Blogs/Food1';
 export default function CardWithImage() {
     return (
         <>
@@ -13,7 +9,9 @@ export default function CardWithImage() {
                     <div className='lg:flex p-6 gap-4 '>
                         <Card className='lg:w-[32%] h-[50%] rounded '
                             imgAlt="Meaningful alt text for an image that is not purely decorative"
-                            imgSrc={Image1}>
+                            imgSrc='/Image/biriyani.jpg'
+                            >
+                                <img src="" className='' alt="" />
                             <Link to={'/food1'}>
                                 <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                                     <p>
@@ -29,7 +27,7 @@ export default function CardWithImage() {
                         </Card>
                         <Card className='lg:w-[32%] h-[50%] rounded'
                             imgAlt="Meaningful alt text for an image that is not purely decorative"
-                            imgSrc={Image2}
+                            imgSrc='/Image/Chiken.jpg'
                         > <Link to={'/food2'}>
                             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                                 <p>
@@ -44,7 +42,7 @@ export default function CardWithImage() {
                         </Card>
                         <Card className='lg:w-[32%] h-[50%] rounded'
                             imgAlt="Meaningful alt text for an image that is not purely decorative"
-                            imgSrc={Image3}
+                            imgSrc='/Image/burger.jpg'
                         ><Link to={'/food2'}>
                             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                                 <p>

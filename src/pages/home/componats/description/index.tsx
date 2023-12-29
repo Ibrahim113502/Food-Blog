@@ -1,6 +1,4 @@
 import React from "react";
-import Image1 from '../../../../assets/Images/description/chili.jpg'
-import Image2 from '../../../../assets/Images/description/chicken.jpg'
 function Description() {
     return (
         <>
@@ -12,8 +10,8 @@ function Description() {
                         <p>Our mission is to celebrate the art of cooking and to bring people together through the joy of food, and we're thrilled to be your one-stop destination for all things delicious.</p>
                     </div>
                     <div className="grid grid-cols-2 gap-4 mt-8">
-                        <img className="mt-4 w-full lg:mt-10 rounded-lg" src={Image2} alt="office content 2" />
-                        <img className="w-full rounded-lg" src={Image1} alt="office content 1" />
+                        <img className="mt-4 w-full lg:mt-10 rounded-lg" src='/description/chili.jpg' alt="Chili" />
+                        <img className="w-full rounded-lg" src='description/chicken.jpg' alt="office content 1" />
                     </div>
                 </div>
             </section>

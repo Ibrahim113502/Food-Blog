@@ -3,7 +3,6 @@ import { Navbar } from 'flowbite-react';
 import { Banner } from 'flowbite-react';
 import { HiArrowRight, HiX } from 'react-icons/hi';
 import { MdPercent } from 'react-icons/md';
-import LogoImg from '../../../../assets/Images/logo.png'
 import { Button, Checkbox, Label, Modal, TextInput } from 'flowbite-react';
 import { DarkThemeToggle, Flowbite } from 'flowbite-react';
 import LoginForm from '../../../Loginform';
@@ -19,7 +18,7 @@ export default function MyNavbar() {
       <Flowbite>
         <Navbar fluid rounded className='lg:!px-[6rem] sm:!flex-nowrap'>
           <Navbar.Brand >
-            <img src={LogoImg} className="mr-3 h-12  sm:h-9   lg:h-28" />
+            <img src='/logo.png' className="mr-3   sm:h-9   lg:h-10" />
             {/* <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Tastes Of Mouth</span> */}
           </Navbar.Brand>
           <DarkThemeToggle className='md:hidden !p-0.5' />
@@ -48,10 +47,10 @@ export default function MyNavbar() {
             <Navbar.Link href="#">Contact</Navbar.Link>
             <Navbar.Link onClick={() => props.setOpenModal('form-elements')}>Sign In</Navbar.Link>
             <Modal show={props.openModal === 'form-elements'} size="md" popup onClose={handleCloseModal}>
-        <Modal.Body>
-          <LoginForm closeModal={handleCloseModal} />
-        </Modal.Body>
-      </Modal>
+              <Modal.Body>
+                <LoginForm closeModal={handleCloseModal} />
+              </Modal.Body>
+            </Modal>
             <DarkThemeToggle className='hidden !p-0.5' />
           </Navbar.Collapse>
         </Navbar>

@@ -1,13 +1,12 @@
 import React from "react"
 import { Navbar } from "flowbite-react"
 import { CiLogout } from "react-icons/ci";
-import AdminImg from '../../../../assets/Images/AdminPage/AdminPhoto.jpg'
 function AdminNavBar() {
     return (
         <>
             <Navbar className="bg-customBlue !justify-start">
                 <Navbar.Brand className="">
-                    <img src={AdminImg} className="mr-3 h-6 sm:h-9 rounded-full" alt="Admin Logo Image" />
+                    <img src="/AdminPage/AdminPhoto.jpg" className="mr-3 h-6 sm:h-9 rounded-full" alt="Admin Logo Image" />
                     <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Mufarij</span>
                 </Navbar.Brand>
                 <Navbar.Toggle />
