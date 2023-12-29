@@ -21,7 +21,7 @@ export default function MyNavbar() {
             <img src='/logo.png' className="mr-3   sm:h-9   lg:h-10" />
             {/* <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Tastes Of Mouth</span> */}
           </Navbar.Brand>
-          <DarkThemeToggle className='md:hidden !p-0.5' />
+          <DarkThemeToggle className='hidden md:hidden !p-0.5' />
           <div className="w-full md:w-[30%] hidden md:hidden">
             <form className="flex items-center">
               <label htmlFor="simple-search" className="sr-only">Search</label>

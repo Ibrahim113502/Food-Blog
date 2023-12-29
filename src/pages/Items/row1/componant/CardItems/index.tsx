@@ -5,7 +5,7 @@ function Carditems(props) {
     return (
         <>
             <Card className=' rounded '
-                imgSrc={props.foodDetails.icon} >
+                imgSrc={`${props.foodDetails.icon}`} >
                 <Link to={`/food${props.foodDetails.id}`}>
                     <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                         <p className=''>
