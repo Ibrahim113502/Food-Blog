@@ -44,7 +44,7 @@ export default function MyNavbar() {
             <Navbar.Link href="#">
               About
             </Navbar.Link>
-            <Navbar.Link href="/foodItems"><Link to={'/foodItems'}>Food Items</Link></Navbar.Link>
+            <Navbar.Link ><Link to={'/foodItems'}>Food Items</Link></Navbar.Link>
             <Navbar.Link href="#">Contact</Navbar.Link>
             <Navbar.Link onClick={() => props.setOpenModal('form-elements')}>Sign In</Navbar.Link>
             <Modal show={props.openModal === 'form-elements'} size="md" popup onClose={handleCloseModal}>
