@@ -41,7 +41,7 @@ export default function MyNavbar() {
             <Navbar.Link href="/home" active>
               Home
             </Navbar.Link>
-            <Navbar.Link href="#">
+            <Navbar.Link href="#about">
               About
             </Navbar.Link>
             <Navbar.Link ><Link to={'/foodItems'}>Food Items</Link></Navbar.Link>
