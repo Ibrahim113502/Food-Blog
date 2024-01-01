@@ -16,13 +16,13 @@ function App() {
     
     <Routes>
       <Route path="/" element={<Navigate to="/home" replace />} />
-        <Route path="home" element={< HomePage/>} />
-        <Route path="foodItems" element={< Row1/>}/>
-        <Route path='AdminLogin' element={<AdminHomePage/>} />
+        <Route path="/home" element={< HomePage/>} />
+        <Route path="/foodItems" element={< Row1/>}/>
+        <Route path='/AdminLogin' element={<AdminHomePage/>} />
         {/* <Route path='ApiExample' element={<ExampleApi/>}/> */}
-        <Route path='reduxExp' element={<ReduxExample/>}/>
-        <Route path="food1" element={<Food1/> } />
-        <Route path='food2' element={<Food2/>}/>
+        <Route path='/reduxExp' element={<ReduxExample/>}/>
+        <Route path="/food1" element={<Food1/> } />
+        <Route path='/food2' element={<Food2/>}/>
       </Routes>
 
      
