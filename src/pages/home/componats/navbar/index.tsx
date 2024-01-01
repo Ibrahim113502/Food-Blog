@@ -6,6 +6,7 @@ import { MdPercent } from 'react-icons/md';
 import { Button, Checkbox, Label, Modal, TextInput } from 'flowbite-react';
 import { DarkThemeToggle, Flowbite } from 'flowbite-react';
 import LoginForm from '../../../Loginform';
+import { Link } from 'react-router-dom';
 export default function MyNavbar() {
   const [openModal, setOpenModal] = useState<string | undefined>();
   const handleCloseModal = () => {
@@ -43,7 +44,7 @@ export default function MyNavbar() {
             <Navbar.Link href="#">
               About
             </Navbar.Link>
-            <Navbar.Link href="/foodItems">Food Items</Navbar.Link>
+            <Navbar.Link href="/foodItems"><Link to={'/foodItems'}>Food Items</Link></Navbar.Link>
             <Navbar.Link href="#">Contact</Navbar.Link>
             <Navbar.Link onClick={() => props.setOpenModal('form-elements')}>Sign In</Navbar.Link>
             <Modal show={props.openModal === 'form-elements'} size="md" popup onClose={handleCloseModal}>

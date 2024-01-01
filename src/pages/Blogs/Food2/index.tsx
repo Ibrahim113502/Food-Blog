@@ -7,7 +7,7 @@ function Food2() {
                 <p className="font-serif font-thin px-6 py-3">
 Chicken Thanthurri is a flavorful and aromatic chicken curry that hails from the southern state of Kerala in India.Here's a basic recipe to prepare Chicken Thanthurri:</p>
                 <div className="flex p-10">
-                    <img className="object-contain  h-full w-[50%]" src='/card/Chiken.jpg' alt="" />
+                    <img className="object-contain  h-full w-[50%]" src='/Image/Chiken.jpg' alt="" />
                     <p className="font-serif px-5 py-2"><span className="font-semibold">Ingredients:<br /></span>
 
                     For Marinating the Chicken:
