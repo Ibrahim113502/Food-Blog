@@ -11,6 +11,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import ContactUs from './pages/ContactPage/index.tsx';
 function App() {
   return (
     
@@ -23,6 +24,7 @@ function App() {
         <Route path='/reduxExp' element={<ReduxExample/>}/>
         <Route path="/food1" element={<Food1/> } />
         <Route path='/food2' element={<Food2/>}/>
+        <Route path='/contactus' element={<ContactUs/>}/>
       </Routes>
 
      
